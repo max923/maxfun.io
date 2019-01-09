@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MaxFun]]></title><description><![CDATA[Frontend Enginner]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Wed, 09 Jan 2019 19:05:30 GMT</lastBuildDate><item><title><![CDATA[Resume]]></title><description><![CDATA[Fang Chung-Chueh Experienced programmer on  . Focused on building rock solid, beautiful, accessible websites and have   of experiences…]]></description><link>/resume/</link><guid isPermaLink="false">/resume/</guid><pubDate>Wed, 09 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Fang Chung-Chueh&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Experienced programmer on &lt;code class=&quot;language-text&quot;&gt;front-end development&lt;/code&gt;. Focused on building rock solid, beautiful, accessible websites and have &lt;code class=&quot;language-text&quot;&gt;3+ years&lt;/code&gt; of experiences. Specialized in &lt;code class=&quot;language-text&quot;&gt;Javascript&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;ReactJs&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Education&lt;/h2&gt;
+&lt;p&gt;2010-2014&lt;br&gt;
+&lt;strong&gt;Bachelor’s in Visual Communication Design&lt;/strong&gt;; Kunshan University&lt;/p&gt;
+&lt;h2&gt;Skills&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Front-end&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;li&gt;Javascript&lt;/li&gt;
+&lt;li&gt;React&lt;/li&gt;
+&lt;li&gt;React Native&lt;/li&gt;
+&lt;li&gt;Redux&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;Jest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Back-end&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NodeJs&lt;/li&gt;
+&lt;li&gt;GraphQL(Apollo)&lt;/li&gt;
+&lt;li&gt;Python(Beginning)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Experience&lt;/h2&gt;
+&lt;p&gt;&lt;small&gt;2017/11 - Now&lt;/small&gt;&lt;br&gt;
+&lt;strong&gt;Sr.Frontend Engineer - Niceday&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Daily active user 12,000 on the web app.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Introduced and adopted techniques such as ReactJS, Redux, recompose, styled-components, GraphQL(Apollo), NodeJs, into our team.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Redesign existing project with the designer to the best user experience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Refactoring project architecture to increase performance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Writing Unit Tests and End-to-End Tests.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Manipulate and analyze data in GraphQL.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Participating in full life cycle of product development.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; enhance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;compose&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    Redesign&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    Refactoring&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    Testing&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; fetch &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gql&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`
+    tools{
+        React
+        Redux
+        GraphQL
+    }
+`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;Niceday&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; doing &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;doing&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;enhance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Niceday&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;small&gt;2017/04 - 2017/08&lt;/small&gt;&lt;br&gt;
+&lt;strong&gt;Frontend Engineer - Gsailors&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed web applications by using Vue.js and Vuex.&lt;/li&gt;
+&lt;li&gt;Improved the workflow and shorten time-to-market.&lt;/li&gt;
+&lt;li&gt;Running an agile software development.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;	Vue&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Answerme&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		data&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			text&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Vue&apos;&lt;/span&gt;
+			&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		template&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Hello {{ text }}&apos;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;small&gt;2016/04 - 2017/02&lt;/small&gt;&lt;br&gt;
+&lt;strong&gt;Frontend Engineer - Intentarget&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Conducted social media platform web development by using React.&lt;/li&gt;
+&lt;li&gt;Developed mobile app by using React Native.&lt;/li&gt;
+&lt;li&gt;Integrated third-party APIs such as Facebook and Google into the web applications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;    &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Intentarget&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Component&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Hello React&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;small&gt;2012/08 - 2013/05&lt;/small&gt;&lt;br&gt;
+&lt;strong&gt;Frontend(Intern) - 法樂數位創意&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cooperated with colleagues on Yahoo、Knorr and Luxgen projects.&lt;/li&gt;
+&lt;li&gt;Knew more about web knowledge.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token style-attr language-css&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt; &lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Amazing Web&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Projects&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://play.niceday.tw/&quot;&gt;Niceday&lt;/a&gt;&lt;/strong&gt;
+
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/f893f3bed8ba4479ca2e3372ca075acc/b754e/project-niceday.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 54.03481012658228%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC2UlEQVQoz3WS6U8TURTF50/yg1vi8sE9CkEb4oIiCLjjgopGsImxgkapiuwaBGWxsim2RZClRigqsrYguIFijCKlQNtpO21nfo6jMX7xJDf3vnPPuS8v7wrizHf8E4PMTX9jfm5OC5fbjSj68Xp9Wg6Hw4RDEnI4hCSFVE7Ep/YCapb8IqFgAO/8rOqdRdi5PQp9yiYO6laRlX6Ip/dLsFlq6bM1MWjvoNlq5dHDeizVeTisRkz5Bg4kbKM8cx9dBXqaM5OpOLoV4/5YjiVsRdBFrUCfuJpU3Upys/U8qyvAbinH+eIJfS+a6GmppKLkOg/uFeG0FlB2KZVj8Wspy4jjYU4qdRf2cXVPFIkxazgYp0PYE70UfexiLiVvwHz7Ig/q82ltq6am4Q62lgrqK26QezmD9poibKZiio2nOZWwhqTNK0mIXsbp3WvZsXER8Vs2YjiegrA3agHpuoXcPxPDB8tNOkvP01eVRU11CQPmYmyVORjOnaSj6ATNuWk0Zu2lzZhC082ztFw5jjn7MHmZ+zmStIt1y5cgmA3bKEtbhyl9PcOFiYwVJvMmP5lG4xGseSfprjTQXm7AVpBOr+ka7zvNfOqsZeSugY6MGKrSohm6Ek/bxSRKD8cgfB3u5oezgy/OLsZ7zEyM9vB5bIjxITszk29xvRvAMzHErHuGoM+DFPTjcbv45HhJb2sjLY8bGFQ/cNrxnLkROwJ/IAYl/P4gASmCFArzl5/3Mf3DhcenrkkggKwoGh+RIwRFLyFZQVbPyh+9EFH3a+rzB9Xo1gg5EtEiEglrWflH/BsKiiKrfVUjy1odVrW/RL1TnQiK5CfUdQdxchRR5UX11qAkEfD/WmwvHo+HkGrWRsloQ/6HwFv1yTOuaaz38mhtuE67pZgnpiomP04w4him/3U/hbdKic2ppa7bzvnqu1T29OOYEhn3zPPy9SvGRoextnZT3tSLc9DBTwMAwzqdJfyzAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;project niceday&quot; title=&quot;&quot; src=&quot;/static/f893f3bed8ba4479ca2e3372ca075acc/fb8a0/project-niceday.png&quot; srcset=&quot;/static/f893f3bed8ba4479ca2e3372ca075acc/1a291/project-niceday.png 148w,
+/static/f893f3bed8ba4479ca2e3372ca075acc/2bc4a/project-niceday.png 295w,
+/static/f893f3bed8ba4479ca2e3372ca075acc/fb8a0/project-niceday.png 590w,
+/static/f893f3bed8ba4479ca2e3372ca075acc/526de/project-niceday.png 885w,
+/static/f893f3bed8ba4479ca2e3372ca075acc/fa2eb/project-niceday.png 1180w,
+/static/f893f3bed8ba4479ca2e3372ca075acc/08f6a/project-niceday.png 1770w,
+/static/f893f3bed8ba4479ca2e3372ca075acc/b754e/project-niceday.png 2528w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.answerme.com.tw/&quot;&gt;Answerme&lt;/a&gt;&lt;/strong&gt;
+
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/9c966ebea94aaf5c80e1c9da648317c9/a0061/project-answerMe.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 54.13060582218725%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACRklEQVQoz3WRW08TQQBG+cE+Gd988gGjib4QkURjVAzyIFSIoAgUESGlLW2329IrFuhle2N3Z2/dbUs5TgsmamSSk7kkc+abfFMtMSB51qNjD7m6GjG4HDGUINcwmpzJDT3PJfA9/J5DP/AQlo3rCHaOTaY/GxxrPro7YCrbCMg3A7JagNrwUZtjeuyUXTZLDltlhy9Fm7WCxXJW8CFjsiwlia7NsZSmTZukYaHKddaxmEqcBySqAcmaT7Luk9KuCUthKGMz/VXn0ZbOg40L7oY6vIgabJ1ZRDs2GcuZiDKOjTrGlcKUlKVqknqAIhPGaz1i1R6Ztj9J9zYuU6kW8wmThZRgrWQRaztkpUyR6cZC1f6fUCZMa9fC8VzoBsQbPeKaNyEmOWq7RFsuyoVLVjgkDHGLUKLIhNHz3iRlWcqSUpbv+ERqHitZnX3NQNVd8sKjbMtHdJO0sG8XpmU5kVNZxolLQR+wXdR5vJlnUe2yozXZaLbY7Rp8r3UI5Su8Pimz2WqhCOv2LytSui2b3S8Jdks6T9eLLGQaRO0uz1fjrB5W2GuazB7keF+psHR6zpEpyPwpTI4bvmlZ0frMhU+59y7HTLjDs406r9Qq+0aH+6FvzB/k2asKZsMFWVCBmZhKRJg3Quta6PgjbInXH6FZQ0Jqi6Vkk/W0xWLc4GOlzqd6lblclifpFG+KP3mZK3Fn5ZCHKRXF0PFHI5zhEOdyyBT/DMPrT/g99CAgJwR5XZDsXMh2ZbOmyQ+tTaTdpuv7f93/BeQDGwDgShN0AAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;project answerMe&quot; title=&quot;&quot; src=&quot;/static/9c966ebea94aaf5c80e1c9da648317c9/fb8a0/project-answerMe.png&quot; srcset=&quot;/static/9c966ebea94aaf5c80e1c9da648317c9/1a291/project-answerMe.png 148w,
+/static/9c966ebea94aaf5c80e1c9da648317c9/2bc4a/project-answerMe.png 295w,
+/static/9c966ebea94aaf5c80e1c9da648317c9/fb8a0/project-answerMe.png 590w,
+/static/9c966ebea94aaf5c80e1c9da648317c9/526de/project-answerMe.png 885w,
+/static/9c966ebea94aaf5c80e1c9da648317c9/fa2eb/project-answerMe.png 1180w,
+/static/9c966ebea94aaf5c80e1c9da648317c9/08f6a/project-answerMe.png 1770w,
+/static/9c966ebea94aaf5c80e1c9da648317c9/a0061/project-answerMe.png 2542w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://jweiwu.pythonanywhere.com/&quot;&gt;NASA Hackathon 2018&lt;/a&gt;&lt;/strong&gt;
+
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/9042697adddf0bd98915e9c59b7720f2/e2ed0/project-NASAHackathon.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 52.89968652037618%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC80lEQVQozx2S3W+aZRiH33YgLVCHfHTAKO0KbkChfEMLFMr3ywsv8EILiaPTdRpGF41f69SjxWSZ2YknOzExnhj/J822ONMas1h1xqQxnlw+evTcR/d13b/nJ33z7Xd8ev8B9ssrOFc8uNfWsF5aZm7JgWS0YfLFceX66JIKm9qbhNTrmNJ9VjI1grEEXn8AzxUfvkAQj/8qkmP1CjqbF53VzStWF3qLE/1rLqzuy9ivxXCm6lizbYyZLqbyBGP1OrZCn1CpQ08bMm4UiCQyxJIZgpEQks4iTEwO5oXR3PI6hmAOY2iXj2cy40MNV76LYbOKPd0kUFFZSrWQAlUCtT2+ePSAhw/vcGP6LofTGeGSjGSwuZhzB7EGcjiKfYyVMQtxhfX6mNlRl5vvDHBlW7iLCp8fq2z3BkhhmfJkys8nP/LixRl/vPyTv8/P2T86RjJHdvDmVczRBivFHpa0jDleZyHaIiar3L87IKkMsOUV/OK99+Ee/saQwt5Nnj75nh+ePuP5ySm/np0xmL6P5MzILEYq6IMljPEGjpyKrzLAvtVjOdej9UaPkDxCirVx77SZ3NLw7HRpHkz55fQ5pyc/8fL33/jn/C/Gd+4iWaI1lhIK1mSL9XIPU6zGxZTK4EBjf6JyY9Lk0UdNZreaxBUNe34fc6ovYF1SyoiNqsa1skawIvLe7iBdCDfw7mh4xbmegsqiAMxvtkirGim1y96oxZfHDT45krFkFQzhGgvBIgvC2LGlciEi/z+78kPmXy8g2TMKdnGaLdvBnGhxUcwOQV9MakgRhUC1gz49YHa7R3mooduQxa83MUQV9NE267WxiKePrzykNx4jXRILXaJnLkHz7/Yxp1Vs6TbmzIDVUp/Hn3UI13qsCnvPtoIx0RHL2lhELK+KqJa3/oO3sAYzHN4+Ej0UNEemzdXdLq7SCPe2immjhH6zjiVRx5sssJau4Azn0AXKolLCWEQSax/w1nv3GL79AVl1RLEY4fFXX/MvvUeGQQ5aSSAAAAAASUVORK5CYII=&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;project NASAHackathon&quot; title=&quot;&quot; src=&quot;/static/9042697adddf0bd98915e9c59b7720f2/fb8a0/project-NASAHackathon.png&quot; srcset=&quot;/static/9042697adddf0bd98915e9c59b7720f2/1a291/project-NASAHackathon.png 148w,
+/static/9042697adddf0bd98915e9c59b7720f2/2bc4a/project-NASAHackathon.png 295w,
+/static/9042697adddf0bd98915e9c59b7720f2/fb8a0/project-NASAHackathon.png 590w,
+/static/9042697adddf0bd98915e9c59b7720f2/526de/project-NASAHackathon.png 885w,
+/static/9042697adddf0bd98915e9c59b7720f2/fa2eb/project-NASAHackathon.png 1180w,
+/static/9042697adddf0bd98915e9c59b7720f2/08f6a/project-NASAHackathon.png 1770w,
+/static/9042697adddf0bd98915e9c59b7720f2/e2ed0/project-NASAHackathon.png 2552w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>
