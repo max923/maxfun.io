@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/maxfun.io`,
   siteMetadata: {
     title: `MaxFun`,
     author: `maxfang`,
@@ -63,7 +64,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/maxfun.png`,
+        icon: `./content/assets/maxfun.png`,
       },
     },
     `gatsby-plugin-offline`,

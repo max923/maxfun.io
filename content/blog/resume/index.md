@@ -109,13 +109,13 @@ export default enhance(Niceday)
 Projects
 ----------
 - **[Niceday](https://play.niceday.tw/)**
-<img src="../../assets/project-niceday.png">
+![Niceday](./project-niceday.png)
 <br>
 - **[Answerme](https://www.answerme.com.tw/)**
-<img src="../../assets/project-answerMe.png">
+![Answerme](./project-answerMe.png)
 <br>
 - **[NASA Hackathon 2018](http://jweiwu.pythonanywhere.com/)**
-<img src="../../assets/project-NASAHackathon.png">
+![NASAHackathon](./project-NASAHackathon.png)
 <br>
 
 
