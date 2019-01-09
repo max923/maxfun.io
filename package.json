@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "maxfun",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Max personal web blogger",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Max fang <fangbug0923@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/max923/maxfun.io/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
