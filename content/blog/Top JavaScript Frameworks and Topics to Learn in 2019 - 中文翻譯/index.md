@@ -1,5 +1,5 @@
 ---
-title: Top JavaScript Frameworks and Topics to Learn in 2019 - 中文翻譯
+title: 2019 最受矚目的 JavaScript 框架與技術學習
 date: '2019-01-14'
 image: '/2019-trends.png'
 ---
