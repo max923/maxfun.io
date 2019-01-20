@@ -14,7 +14,11 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <SEO
+          title={post.frontmatter.title}
+          description={post.excerpt}
+          image={post.frontmatter.image}
+        />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -32,6 +36,7 @@ class BlogPostTemplate extends React.Component {
             fontSize: '18px',
             letterSpacing: '.5px',
           }}
+          id="blogger_container"
           dangerouslySetInnerHTML={{ __html: post.html }} 
         />
         <hr
@@ -40,7 +45,7 @@ class BlogPostTemplate extends React.Component {
           }}
         />
 
-        <ul
+        {/* <ul
           style={{
             display: `flex`,
             flexWrap: `wrap`,
@@ -63,7 +68,7 @@ class BlogPostTemplate extends React.Component {
               </Link>
             )}
           </li>
-        </ul>
+        </ul> */}
       </Layout>
     )
   }
@@ -86,6 +91,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        image
       }
     }
   }

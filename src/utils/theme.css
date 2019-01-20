@@ -152,4 +152,8 @@
    float: left;
    min-width: 100%;
  }
+ #blogger_container h3{
+    font-weight: 600;
+    line-height: 1.5;
+ }
  
