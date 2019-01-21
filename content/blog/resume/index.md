@@ -62,7 +62,7 @@ const fetch = gql`
 const Niceday = ({ doing }) => <div>{doing}</div>
 export default enhance(Niceday)
 ```
-<small>2017/04 - 2017/08</small><br>
+<small>2017/04 - 2017/11</small><br>
 **Frontend Engineer - Gsailors**
 
 - Developed web applications by using Vue.js and Vuex.
@@ -84,7 +84,7 @@ export default enhance(Niceday)
 **Frontend Engineer - Intentarget**
 
 - Conducted social media platform web development by using React.
-- Developed mobile app by using React Native.
+- Developed news mobile app by using React Native.
 - Integrated third-party APIs such as Facebook and Google into the web applications.
 
 ```js
