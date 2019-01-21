@@ -10,13 +10,13 @@ image: '/2019-trends.png'
 
 又來到了年度 JavaScript 技術生態回顧了，我們的目標是找出最有投資報酬率的學系主題與技術，哪些框架是大家常用的，又或者未來的趨勢是什麼？我們並不是嘗試找出最好的框架，但我們確實用數據，來幫助你在面試的時候當別人問你 "你知道xxxx嗎?"
 
-我們不會考慮哪一個框架最快，又或者是哪一個框架質量最好，我們假設這些效能都已經很完善了，並且在工作上都已經可以完成需求了，而我們所要關注的是: 到底哪些是最受歡迎的?
+我們不會考慮哪一個框架最快，又或者是哪一個框架質量最好，我們假設這些效能都已經很完善了，並且在工作上都已經可以完成需求了，而我們所要關注的是: 到底哪些是最多人使用的?
 
 ## Component Frameworks (元件框架)
 
-現今主流的 Component Frameworks 有三個: React, Angular 和 Vue.js, 主要是因為
+現今主流的 Component Frameworks 有三個: React, Angular 和 Vue.js, 主要是因為在工作上，他們多數被採用，並遠大於其他的框架。
 
-去年的時候我關注到 Vue.js 成長得非常快速，並且有可能在2018的時候超越Angular，但這事情並沒有發生，但它依舊是一個成長非常快速的框架，我也發現到說要 React 開發者，轉換到其他框架更加的困難<small>(黏著度比較高啦)</small>，因為整體而言 React 用戶滿意度比 Angular 來得高，開發者並沒有迫切的理由去選擇另外一個框架，所以 React 在去年一樣穩坐了2018的寶座。
+去年的時候我關注到 Vue.js 成長得非常快速，並且有可能在2018的時候超越Angular，但這事情並沒有發生，但它依舊是一個成長非常快速的框架，我也發現到說要 React 開發者，轉換到其他框架更加的困難，因為整體而言 React 用戶滿意度比 Angular 來得高，開發者並沒有迫切的理由去選擇另外一個框架，所以 React 在去年一樣穩坐了2018的寶座。
 
 ### Prediction: React Continues to Dominate in 2019 </br> (預測: React 將繼續會是2019的寶座)
 
@@ -138,6 +138,16 @@ ICO(首次代幣發行)募資在2018年初達到一個巔峰，並且在2017-201
 加密技術的研究員，對量子安全加密算法很關注，儘管在2018年，不斷湧現有趣的研究進展，但最近有一篇文章[提出了一些看法](https://www.theregister.co.uk/2018/12/06/quantum_computing_slow/)。<br>
 這讓我想起早期的AI人工智能，在1980年的時候升溫，在1980～1990取得了一些有限的成就，但卻僅僅在2010的時候，這項技術讓人們感到興奮不已。
 
+## 心得
+看了那麼多的框架與技術，相信很多人一定都會心裡OS:"Oh my god! 每年都有新東西，頭腦快爆炸了，怎麼學得完啊！"，哈哈的確沒有錯，科技與技術的發展近十年發展非常快速，最近看到一張有趣的圖，[JavaScript十年前與十年後的變化](https://twitter.com/codepo8/status/1086244168287047680?fbclid=IwAR0mvf5dT4IFEc6wi3w6YyJ-nJ9Cl3VnRSqg6HpsDdv9lhzisWfWD1Yd6Wc)。
+![10YearChallenge](./javascript-tenyears.jpg)
+但我覺得再去追隨這些很新、很潮的技術同時，是否也去思考這些技術背後，所要解決的問題是什麼，每個新的東西出來，都是為了去解決人們在使用上的需求，TypeScript 的出現，解決了 JavaScript 弱型別上的不確定性、Redux 幫助早期 React 在對於管理 State 上面不足的地方、 GraphQL 解決了在以往 RESTFul 與後端溝通上成本，並更彈性且精確地拿到資料，而現在大家時常談論的JavaScript框架，則讓我們在架構大型專案的時候，更好的去維護且復用。
+
+年初的時候 Redux 作者也在自己的部落格寫了一篇[things-i-dont-know-as-of-2018](https://overreacted.io/zh-hant/things-i-dont-know-as-of-2018/?fbclid=IwAR3m6DV3FQfu1jrWjXuZhNtfjrE9-DhXXXaziTZ8KmOwFw1kCEbJIlMauRc)，短短的時間內就在社群上被分享很多次，並翻譯成多種語言，我相信很多人再看了這篇之後會會心一笑，就算被稱為"大神"的開發者，也有很多不知道的地方，當然了，無庸置疑在他擅長的領域上，他卻擁有豐富的專業與技術。
+
+翻譯這篇不是為了去挑撥任何的技術與框架，只是希望讓大家在新的一年，能夠去快速了解一些大家認為不錯的或是熱門的，我相信"沒有最好的設計，只有最適合當前的設計"，希望能夠幫助大家，在工作崗位上或得更好的發揮。
+
+<br>
 
 **資料來源: [Top JavaScript Frameworks and Topics to Learn in 2019](https://medium.com/javascript-scene/top-javascript-frameworks-and-topics-to-learn-in-2019-b4142f38df20)**
 

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MaxFun]]></title><description><![CDATA[Frontend Enginner]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Sun, 20 Jan 2019 18:51:33 GMT</lastBuildDate><item><title><![CDATA[2019 最受矚目的 JavaScript 框架與技術學習]]></title><description><![CDATA[以下內容翻譯自:  Top JavaScript Frameworks and Topics to Learn in 2019 又來到了年度 JavaScript…]]></description><link>/Top JavaScript Frameworks and Topics to Learn in 2019 - 中文翻譯/</link><guid isPermaLink="false">/Top JavaScript Frameworks and Topics to Learn in 2019 - 中文翻譯/</guid><pubDate>Mon, 14 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;以下內容翻譯自: &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-frameworks-and-topics-to-learn-in-2019-b4142f38df20&quot;&gt;Top JavaScript Frameworks and Topics to Learn in 2019&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MaxFun]]></title><description><![CDATA[Frontend Enginner]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Mon, 21 Jan 2019 03:58:55 GMT</lastBuildDate><item><title><![CDATA[2019 最受矚目的 JavaScript 框架與技術學習]]></title><description><![CDATA[以下內容翻譯自:  Top JavaScript Frameworks and Topics to Learn in 2019 又來到了年度 JavaScript…]]></description><link>/Top JavaScript Frameworks and Topics to Learn in 2019 - 中文翻譯/</link><guid isPermaLink="false">/Top JavaScript Frameworks and Topics to Learn in 2019 - 中文翻譯/</guid><pubDate>Mon, 14 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;以下內容翻譯自: &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-frameworks-and-topics-to-learn-in-2019-b4142f38df20&quot;&gt;Top JavaScript Frameworks and Topics to Learn in 2019&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2600/1*RFPEzZmTByjDmScp1sY8Jw.png&quot; alt=&quot;JavaScript 2019&quot;&gt;&lt;/p&gt;
 &lt;p&gt;又來到了年度 JavaScript 技術生態回顧了，我們的目標是找出最有投資報酬率的學系主題與技術，哪些框架是大家常用的，又或者未來的趨勢是什麼？我們並不是嘗試找出最好的框架，但我們確實用數據，來幫助你在面試的時候當別人問你 “你知道xxxx嗎?”&lt;/p&gt;
-&lt;p&gt;我們不會考慮哪一個框架最快，又或者是哪一個框架質量最好，我們假設這些效能都已經很完善了，並且在工作上都已經可以完成需求了，而我們所要關注的是: 到底哪些是最受歡迎的?&lt;/p&gt;
+&lt;p&gt;我們不會考慮哪一個框架最快，又或者是哪一個框架質量最好，我們假設這些效能都已經很完善了，並且在工作上都已經可以完成需求了，而我們所要關注的是: 到底哪些是最多人使用的?&lt;/p&gt;
 &lt;h2&gt;Component Frameworks (元件框架)&lt;/h2&gt;
-&lt;p&gt;現今主流的 Component Frameworks 有三個: React, Angular 和 Vue.js, 主要是因為&lt;/p&gt;
-&lt;p&gt;去年的時候我關注到 Vue.js 成長得非常快速，並且有可能在2018的時候超越Angular，但這事情並沒有發生，但它依舊是一個成長非常快速的框架，我也發現到說要 React 開發者，轉換到其他框架更加的困難&lt;small&gt;(黏著度比較高啦)&lt;/small&gt;，因為整體而言 React 用戶滿意度比 Angular 來得高，開發者並沒有迫切的理由去選擇另外一個框架，所以 React 在去年一樣穩坐了2018的寶座。&lt;/p&gt;
+&lt;p&gt;現今主流的 Component Frameworks 有三個: React, Angular 和 Vue.js, 主要是因為在工作上，他們多數被採用，並遠大於其他的框架。&lt;/p&gt;
+&lt;p&gt;去年的時候我關注到 Vue.js 成長得非常快速，並且有可能在2018的時候超越Angular，但這事情並沒有發生，但它依舊是一個成長非常快速的框架，我也發現到說要 React 開發者，轉換到其他框架更加的困難，因為整體而言 React 用戶滿意度比 Angular 來得高，開發者並沒有迫切的理由去選擇另外一個框架，所以 React 在去年一樣穩坐了2018的寶座。&lt;/p&gt;
 &lt;h3&gt;Prediction: React Continues to Dominate in 2019 &lt;/br&gt; (預測: React 將繼續會是2019的寶座)&lt;/h3&gt;
 &lt;p&gt;在我們追蹤數據的第三年裡，&lt;a href=&quot;https://2018.stateofjs.com/front-end-frameworks/overview/&quot;&gt;React 滿意度依舊高於 Angular&lt;/a&gt;，而對照其他的框架，React表現一樣不俗，現階段我也沒有看出有任何可以與它挑戰的在未來的2019裡，除非它發生重大的的變動，不然它將會一樣是2019的最受歡迎的框架之一。&lt;/p&gt;
 &lt;p&gt;React 正不斷的越來越好，從 React 0.14.版本開始，新的 &lt;a href=&quot;https://reactjs.org/docs/hooks-reference.html&quot;&gt;React hooks API&lt;/a&gt;把舊有令人詬病的 &lt;code class=&quot;language-text&quot;&gt;class&lt;/code&gt; API 換掉(舊有的 class API 依舊可以用，但推薦使用 hooks API )，React 增加了很多很棒的 API，像是 code splitting 與 concurrent rendering (&lt;a href=&quot;https://reactjs.org/blog/2018/11/13/react-conf-recap.html&quot;&gt;詳細&lt;/a&gt;)，這些毫無疑問的都讓 React 在2019更難被打敗，如果要我推薦一個友善的前端框架給開發者，那麼非它莫屬了。&lt;/p&gt;
@@ -369,6 +369,36 @@
 這讓我想起早期的AI人工智能，在1980年的時候升溫，在1980～1990取得了一些有限的成就，但卻僅僅在2010的時候，這項技術讓人們感到興奮不已。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2&gt;心得&lt;/h2&gt;
+&lt;p&gt;看了那麼多的框架與技術，相信很多人一定都會心裡OS:“Oh my god! 每年都有新東西，頭腦快爆炸了，怎麼學得完啊！“，哈哈的確沒有錯，科技與技術的發展近十年發展非常快速，最近看到一張有趣的圖，&lt;a href=&quot;https://twitter.com/codepo8/status/1086244168287047680?fbclid=IwAR0mvf5dT4IFEc6wi3w6YyJ-nJ9Cl3VnRSqg6HpsDdv9lhzisWfWD1Yd6Wc&quot;&gt;JavaScript十年前與十年後的變化&lt;/a&gt;。
+
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 60.69444444444444%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwABBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHumxRsVX//xAAZEAACAwEAAAAAAAAAAAAAAAAAARARQRL/2gAIAQEAAQUC12dRqP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAAAAgIf/aAAgBAQAGPwIq/wD/xAAaEAACAwEBAAAAAAAAAAAAAAABEQAhURBh/9oACAEBAAE/IULsvHDZUGuAPOGyBhVP/9oADAMBAAIAAwAAABC7L//EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oACAEDAQE/EIS//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8QR//EAB4QAAICAgIDAAAAAAAAAAAAAAERACExcRBBUWHR/9oACAEBAAE/EF5iHYlqPCgNgE8+9QQIkF0TeN8WgU/sOFZNnJM//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;10YearChallenge&quot;
+        title=&quot;&quot;
+        src=&quot;/maxfun.io/static/b6c6695fdfb5f7e1681b0293960719f8/f8fb9/javascript-tenyears.jpg&quot;
+        srcset=&quot;/maxfun.io/static/b6c6695fdfb5f7e1681b0293960719f8/e8976/javascript-tenyears.jpg 148w,
+/maxfun.io/static/b6c6695fdfb5f7e1681b0293960719f8/63df2/javascript-tenyears.jpg 295w,
+/maxfun.io/static/b6c6695fdfb5f7e1681b0293960719f8/f8fb9/javascript-tenyears.jpg 590w,
+/maxfun.io/static/b6c6695fdfb5f7e1681b0293960719f8/3b84f/javascript-tenyears.jpg 720w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+但我覺得再去追隨這些很新、很潮的技術同時，是否也去思考這些技術背後，所要解決的問題是什麼，每個新的東西出來，都是為了去解決人們在使用上的需求，TypeScript 的出現，解決了 JavaScript 弱型別上的不確定性、Redux 幫助早期 React 在對於管理 State 上面不足的地方、 GraphQL 解決了在以往 RESTFul 與後端溝通上成本，並更彈性且精確地拿到資料，而現在大家時常談論的JavaScript框架，則讓我們在架構大型專案的時候，更好的去維護且復用。&lt;/p&gt;
+&lt;p&gt;年初的時候 Redux 作者也在自己的部落格寫了一篇&lt;a href=&quot;https://overreacted.io/zh-hant/things-i-dont-know-as-of-2018/?fbclid=IwAR3m6DV3FQfu1jrWjXuZhNtfjrE9-DhXXXaziTZ8KmOwFw1kCEbJIlMauRc&quot;&gt;things-i-dont-know-as-of-2018&lt;/a&gt;，短短的時間內就在社群上被分享很多次，並翻譯成多種語言，我相信很多人再看了這篇之後會會心一笑，就算被稱為”大神”的開發者，也有很多不知道的地方，當然了，無庸置疑在他擅長的領域上，他卻擁有豐富的專業與技術。&lt;/p&gt;
+&lt;p&gt;翻譯這篇不是為了去挑撥任何的技術與框架，只是希望讓大家在新的一年，能夠去快速了解一些大家認為不錯的或是熱門的，我相信”沒有最好的設計，只有最適合當前的設計”，希望能夠幫助大家，在工作崗位上或得更好的發揮。&lt;/p&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;資料來源: &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-frameworks-and-topics-to-learn-in-2019-b4142f38df20&quot;&gt;Top JavaScript Frameworks and Topics to Learn in 2019&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;!-- Javascript 在去年
 annual 全年
