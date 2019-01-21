@@ -1,7 +1,7 @@
 ---
 title: 2019 最受矚目的 JavaScript 框架與技術學習
 date: '2019-01-14'
-image: '/2019-trends.png'
+image: 'https://cdn-images-1.medium.com/max/2600/1*RFPEzZmTByjDmScp1sY8Jw.png'
 ---
 
 **以下內容翻譯自: [Top JavaScript Frameworks and Topics to Learn in 2019](https://medium.com/javascript-scene/top-javascript-frameworks-and-topics-to-learn-in-2019-b4142f38df20)**
@@ -94,9 +94,9 @@ TypeScript 對於大部分的高階函數來說，似乎比較沒那麼好用，
 對於我自己在軟體上的認知，它還不是那麼的有彈性以及功能上的齊全，因為在我實際用於專案上的時候，的確有些地方讓我蠻沮喪的，但我還是抱著希望有一天它可以增加更多我們所需要的，我很喜歡它在強型別上的淺力，真的很有幫助。
 
 
-***我目前對TypeScript的評價是: 在部分、有限制性的使用情境下很牛逼，但放到大型商業應用上，反而顯得笨拙，名大於實，且投資報酬率非常的低。很諷刺的，TypeScript對自己的評價是"規模化後的Javascript"。或許他們應該加一句:"詭異的規模化後的Javascript"***
+***我目前對TypeScript的評價是: 在部分、有限制性的使用情境下很好用，但放到大型商業應用上，反而顯得笨拙，名大於實，且投資報酬率非常的低。很諷刺的，TypeScript對自己的評價是"規模化後的Javascript"。或許他們應該加一句:"詭異的規模化後的Javascript"***
 
-What we need for JavaScript is a type system modeled more after Haskell’s, and less after Java’s.
+我們對於 JavaScript 真正所需要的是一個比Haskell多一點，比Java少一點的型別系統模型。
 
 ### Other JavaScript Tech to Learn (其他JavaScript要學的技術)
 - GraphQL to query services

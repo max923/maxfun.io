@@ -5,7 +5,6 @@ import { rhythm } from '../utils/typography'
 import email from '../../content/assets/icon-email.png'
 import github from '../../content/assets/icon-github.png'
 import linkedIn from '../../content/assets/icon-linkedIn.png'
-import avatar from '../../content/assets/profile-pic.jpg'
 
 const Iconstyle = {
   width: '20px',
@@ -68,7 +67,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/profile-pic-circle.jpg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
@@ -79,7 +78,8 @@ const bioQuery = graphql`
       siteMetadata {
         author
         social {
-          twitter
+          github
+          linkedin
         }
       }
     }

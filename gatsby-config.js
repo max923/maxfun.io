@@ -4,9 +4,10 @@ module.exports = {
     title: `MaxFun`,
     author: `maxfang`,
     description: `Frontend Enginner`,
-    siteUrl: ``,
+    siteUrl: 'https://max923.github.io/maxfun.io/',
     social: {
-      twitter: ``,
+      github: 'https://github.com/max923',
+      linkedin: 'linkedin.com/in/maxfang923/',
     },
   },
   plugins: [
