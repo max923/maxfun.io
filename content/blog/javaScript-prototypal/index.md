@@ -81,7 +81,7 @@ Oh!這似乎不是我們所想要的，為什麼呢？我們知道這些英雄�
 ### Object.create
 >Object.create allows you to create an object which will delegate to another object on failed lookups
 
-看起來還不錯，但有個問題，例如當我們要再為Hero增加新的飛行技能的時候，就要在 Hero 那邊再加一行`hero.fly = heroMethods.fly`上去，這樣顯得不是很方便，`Object.create`幫我們建立一個新的物件，並把屬性繼承到新的物件上，我們試著用 Object.create 再加以改寫看看。
+看起來還不錯，但有個問題，例如當我們要再為 Hero 增加新的飛行技能的時候，就要在 Hero 那邊再加一行`hero.fly = heroMethods.fly`上去，這樣顯得不是很方便，如果我們可以把這些屬性加到物件的原型上，這樣物件彼此之間就可以互相共用了，而`Object.create` 幫我們解決了這個問題，他幫我們建立一個新的物件，並把屬性繼承到新的物件原型上，然後返回給我們，我們再用 Object.create 來改寫看看。
 ```javascript
     const heroMethods = {
         attack() {
