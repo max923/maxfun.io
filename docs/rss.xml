@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MaxFun]]></title><description><![CDATA[Frontend Enginner]]></description><link>https://max923.github.io/maxfun.io/</link><generator>RSS for Node</generator><lastBuildDate>Wed, 06 Feb 2019 15:54:58 GMT</lastBuildDate><item><title><![CDATA[JavaScript -- "prototypal"]]></title><description><![CDATA[我們今天來談談在JavaScript裡面跟其他語言很不一樣的東西 ，為什麼會想要寫這一篇呢？其實就算不懂 prototypal 你一樣可以做開發，現在很多的框架或是ES6都已經包裝越來越好了，但如果你要成為一位資深的工程師，prototypal…]]></description><link>https://max923.github.io/maxfun.io//javaScript-prototypal/</link><guid isPermaLink="false">https://max923.github.io/maxfun.io//javaScript-prototypal/</guid><pubDate>Tue, 05 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://i.ytimg.com/vi/MLsg-jv2D08/maxresdefault.jpg&quot; alt=&quot;javascript prototype&quot;&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MaxFun]]></title><description><![CDATA[Frontend Enginner]]></description><link>https://max923.github.io/maxfun.io/</link><generator>RSS for Node</generator><lastBuildDate>Wed, 06 Feb 2019 18:19:48 GMT</lastBuildDate><item><title><![CDATA[JavaScript -- "prototypal"]]></title><description><![CDATA[我們今天來談談在JavaScript裡面跟其他語言很不一樣的東西 ，為什麼會想要寫這一篇呢？其實就算不懂 prototypal 你一樣可以做開發，現在很多的框架或是ES6都已經包裝越來越好了，但如果你要成為一位資深的工程師，prototypal…]]></description><link>https://max923.github.io/maxfun.io//javaScript-prototypal/</link><guid isPermaLink="false">https://max923.github.io/maxfun.io//javaScript-prototypal/</guid><pubDate>Tue, 05 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://i.ytimg.com/vi/MLsg-jv2D08/maxresdefault.jpg&quot; alt=&quot;javascript prototype&quot;&gt;&lt;/p&gt;
 &lt;center&gt;&lt;small&gt;Understand JavaScript Prototypes&lt;/small&gt;&lt;/center&gt;
 &lt;br&gt;
 &lt;p&gt;我們今天來談談在JavaScript裡面跟其他語言很不一樣的東西&lt;code class=&quot;language-text&quot;&gt;prototypal&lt;/code&gt;，為什麼會想要寫這一篇呢？其實就算不懂 prototypal 你一樣可以做開發，現在很多的框架或是ES6都已經包裝越來越好了，但如果你要成為一位資深的工程師，prototypal 你就必須要了解，就像每個家庭主婦都會煮菜，但不是每個家庭主婦都是大廚，如果你要成為一位大廚，就不能只會炒菜跟煮飯(好像扯太遠了XD)。&lt;/p&gt;
@@ -15,7 +15,7 @@
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
     hero&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;attack&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// IRON MAN is attacking&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;恭喜你！我們有了一個鋼鐵人出來，世界獲得了短暫的和平，A few years later…，黑暗勢力慢慢崛起，我們發現只有一隻鋼鐵人沒有辦法守護世界的和平，我們需要一個組成一個守護者聯盟，我們把英雄共同的行為部分給抽出來，並用&lt;code class=&quot;language-text&quot;&gt;function&lt;/code&gt;的包裝，我們就可以很快的產生出很多不一樣的英雄。&lt;/p&gt;
+&lt;p&gt;恭喜你！我們有了一個鋼鐵人出來，世界獲得了短暫的和平，A few years later…，黑暗勢力慢慢崛起，我們發現只有一隻鋼鐵人沒有辦法守護世界的和平，需要組成一個守護者聯盟，那麼把英雄共同的行為部分給抽出來，並用&lt;code class=&quot;language-text&quot;&gt;function&lt;/code&gt;的包裝，似乎就可以很快的產生出很多不一樣的英雄。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Hero&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;power&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; hero &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
         hero&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; name
@@ -32,7 +32,7 @@
     &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; BlackPanther &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Hero&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;BlackPanther&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;But…&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;    IronMan&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;attack &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; BlackPanther&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;attack &lt;span class=&quot;token comment&quot;&gt;// false 都是獨立的記憶體位置&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Oh!這似乎不是我們所想要的，為什麼呢？我們知道這些英雄的行為都是動態，並且完全通用的，這代表我們不需要每次再重新建立的時候，都還要創建一個新的 method，如果我們今天創建了100個英雄角色，那麼這100個英雄角色都會包含這些methods在裡面，這樣會占據相當多的記憶體，我們只需要讓每個 hero 都去 reference 同一個物件就好。&lt;/p&gt;
+&lt;p&gt;Oh!這似乎不是我們所想要的，為什麼呢？我們知道這些英雄的行為都是動態，並且完全通用的，這代表不需要每次再重新建立的時候，都還要創建一個新的 method，如果今天我們創建了100個英雄角色，那麼這100個英雄角色都會包含這些methods在裡面，這樣會占據相當多的記憶體，只需要讓每個 hero 都去 reference 同一個物件就好。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; heroMethods &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;token function&quot;&gt;attack&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
             console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; is attacking.`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -62,7 +62,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Object.create allows you to create an object which will delegate to another object on failed lookups&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;看起來還不錯，但有個問題，例如當我們要再為 Hero 增加新的飛行技能的時候，就要在 Hero 那邊再加一行&lt;code class=&quot;language-text&quot;&gt;hero.fly = heroMethods.fly&lt;/code&gt;上去，這樣顯得不是很方便，如果我們可以把這些屬性加到物件的原型上，這樣物件彼此之間就可以互相共用了，而&lt;code class=&quot;language-text&quot;&gt;Object.create&lt;/code&gt; 幫我們解決了這個問題，他幫我們建立一個新的物件，並把屬性繼承到新的物件原型上，然後返回給我們，我們再用 Object.create 來改寫看看。&lt;/p&gt;
+&lt;p&gt;看起來還不錯，但有個問題，例如當我們要再為 Hero 增加新的飛行技能的時候，就要在 Hero 那邊再加一行&lt;code class=&quot;language-text&quot;&gt;hero.fly = heroMethods.fly&lt;/code&gt;上去，這樣顯得不是很方便，如果可以把這些屬性加到物件的原型上，這樣物件彼此之間就可以互相共用了，而&lt;code class=&quot;language-text&quot;&gt;Object.create&lt;/code&gt; 可以幫我們完成這件事情，建立一個新的物件，並把屬性繼承到新的物件原型上，然後返回給我們，用 Object.create 來改寫看看吧。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; heroMethods &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;token function&quot;&gt;attack&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
             console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; is attacking.`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -80,7 +80,8 @@
     &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; IronMan &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Hero&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;IronMan&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; BlackPanther &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Hero&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;BlackPanther&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Prototypal Instantiation&lt;/h3&gt;
-&lt;p&gt;Ｗow～我們這下可以拍復仇者聯盟無限續集了，但還是有一些地方可以做改進的，我們要去維護一個”heroMethods”聽起來有點奇怪，既然 JavaScript 屬於 prototype based 的語言，我們就用 prototypal inheritance 的方式，去繼承我們要的物件似乎更理想囉。&lt;/p&gt;
+&lt;p&gt;Ｗow～這下可以拍復仇者聯盟無限續集了，但還是有一些地方可以做小小的改進的，為了要能互相共用這些屬性，卻要去單獨維護一個 “heroMethods” 聽起來有不太合理，那有沒有更好的方法可以達成我們所要的呢？
+有，那就是 &lt;code class=&quot;language-text&quot;&gt;prototype&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;prototype and __proto__&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;__proto__ : 每個物件都有自己的 __proto__ ，當前找不到屬性的話就會往下一層的 __proto__ 去找，直到找到最後null為止，而這樣從物件本身往 proto 尋找下去的鍊我們就稱作「原型鍊（prototype chain）」&lt;/li&gt;
@@ -134,14 +135,14 @@
   
   &lt;/a&gt;
     
-我們把 heroMethods 裡面的屬性加到 prototype 裡面，接著我們用 Object.create 去繼承 Hero.prototype，這樣一來就完成了。&lt;/p&gt;
-&lt;p&gt;property 是在 JavaScript 中每個 function 都具有的屬性，讓我們在函數的所有實例化之間共享方法，我們稱這種    pattern 為 &lt;strong&gt;Prototypal Instantiation&lt;/strong&gt;。&lt;/p&gt;
+我們改用 prototype 把 heroMethods 裡面的屬性加到裡面去，接著用 Object.create 去繼承 Hero.prototype，這樣一來就完成囉。&lt;/p&gt;
+&lt;p&gt;prototype 是在 JavaScript 中每個 function 都具有的屬性，讓我們在函數的所有實例化之間共享方法，我們稱這種    pattern 為 &lt;strong&gt;Prototypal Instantiation&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3&gt;“new” keyword&lt;/h3&gt;
 &lt;p&gt;Oh～在 JavaScript 裡面難道就沒有一個更快速且便利，完成上面的那些事情嗎？
-答案是有，就是 new 這個 keyword，我們從上面的寫法可以知道，要創建一個 Hero 有兩個重要的地方:&lt;/p&gt;
+當然有囉，那就是 new 這個 keyword，從上面的寫法可以知道，要創建一個 Hero 有兩個重要的地方:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;創建對象，並把 function’s prototype 委託給新建立的物件。&lt;/li&gt;
-&lt;li&gt;回傳建構式物件回去。&lt;/li&gt;
+&lt;li&gt;回傳物件回去。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;用 new keyword 來改寫上面例子看看&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Hero&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;power&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -159,8 +160,8 @@
 &lt;p&gt;啊哈～看出來了嘛，沒錯！new keyword 在後面幫你把上面說的兩點做掉了，我們來看一下 new 實際做了哪些事情，在 MDN 上面列出了幾點:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Creates a blank, plain JavaScript object(創建一個空的物件)&lt;/li&gt;
-&lt;li&gt;Links (sets the constructor of) this object to another object(鏈結其他的物件，並給予constructor屬性)&lt;/li&gt;
-&lt;li&gt;Passes the newly created object from Step 1 as the this context(把創建的新物件綁定 this)&lt;/li&gt;
+&lt;li&gt;Links (sets the constructor of) this object to another object(物件原型繼承)&lt;/li&gt;
+&lt;li&gt;Passes the newly created object from Step 1 as the this context(把新創建的物件綁定 &lt;strong&gt;this&lt;/strong&gt;)&lt;/li&gt;
 &lt;li&gt;Returns this if the function doesn’t return its own object(如果函式沒有回傳自己的物件，則回傳this)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;那如果我們不小心忘了在前面加&lt;strong&gt;new&lt;/strong&gt;呢？
@@ -199,12 +200,12 @@
   
   &lt;/a&gt;
     &lt;/p&gt;
-&lt;p&gt;Oh my god! “IronMan” 變成 undefined，還有一個荒唐的錯誤，name 變成在 global object 底下了，而且不會跳出任何的錯誤訊息，這對於我們開發者來說其實不是很 friendly。&lt;br&gt;但不會擔心，社會在走，JavaScript 更新每年都會有，在 ECMAScript 6 中引入了類別 (class) 。&lt;/p&gt;
+&lt;p&gt;Oh my god! “IronMan” 變成 undefined，還有一個荒唐的錯誤，name 變成在 global object 底下了，而且不會跳出任何的錯誤訊息，這對於我們開發者來說其實不是很 friendly。&lt;br&gt;但不用擔心，社會在走，JavaScript 更新每年都會有，在 ECMAScript 6 中引入了類別 (class) 。&lt;/p&gt;
 &lt;h3&gt;Class&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;JavaScript classes, introduced in ECMAScript 2015, are primarily syntactical sugar over JavaScript’s existing prototype-based inheritance. The class syntax does not introduce a new object-oriented inheritance model to JavaScript.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;在 ECMAScript 6 中新增的 class 只是個 syntactical sugar(語法糖)，與其他OOP語言不太一樣，底層還是實作 prototype-based，我們來試試用 Class 改寫看看吧。&lt;/p&gt;
+&lt;p&gt;在 ECMAScript 6 中新增的 class 只是個 syntactical sugar(語法糖)，與其他OOP語言不太一樣，底層還是實作 prototype-based，我們改用 Class 寫寫看吧。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Hero&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token function&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;power&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; name
@@ -219,7 +220,7 @@
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; IronMan &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Hero&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;IronMan&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; BlackPanther &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Hero&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;BlackPanther&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;是不是覺得很熟悉啊！是不是跟其他語言的寫法有87分像呢，class 寫法也讓我們寫起來更加簡潔。&lt;/p&gt;
+&lt;p&gt;是不是覺得很熟悉啊！是不是跟其他語言的寫法有87分像呢，class 寫法讓我們寫起來更加簡潔與清楚。&lt;/p&gt;
 &lt;p&gt;喔～那如果我們也一樣小心忘了在前面加&lt;strong&gt;new&lt;/strong&gt;呢？
 
   &lt;a

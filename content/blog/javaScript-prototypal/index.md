@@ -29,7 +29,7 @@ link: javaScript-prototypal
 
     hero.attack() // IRON MAN is attacking
 ```
-恭喜你！我們有了一個鋼鐵人出來，世界獲得了短暫的和平，A few years later...，黑暗勢力慢慢崛起，我們發現只有一隻鋼鐵人沒有辦法守護世界的和平，我們需要一個組成一個守護者聯盟，我們把英雄共同的行為部分給抽出來，並用`function`的包裝，我們就可以很快的產生出很多不一樣的英雄。
+恭喜你！我們有了一個鋼鐵人出來，世界獲得了短暫的和平，A few years later...，黑暗勢力慢慢崛起，我們發現只有一隻鋼鐵人沒有辦法守護世界的和平，需要組成一個守護者聯盟，那麼把英雄共同的行為部分給抽出來，並用`function`的包裝，似乎就可以很快的產生出很多不一樣的英雄。
 ```javascript
     function Hero (name,power) {
         const hero = {}
@@ -50,7 +50,7 @@ But...
 ```javascript
     IronMan.attack === BlackPanther.attack // false 都是獨立的記憶體位置
 ```
-Oh!這似乎不是我們所想要的，為什麼呢？我們知道這些英雄的行為都是動態，並且完全通用的，這代表我們不需要每次再重新建立的時候，都還要創建一個新的 method，如果我們今天創建了100個英雄角色，那麼這100個英雄角色都會包含這些methods在裡面，這樣會占據相當多的記憶體，我們只需要讓每個 hero 都去 reference 同一個物件就好。
+Oh!這似乎不是我們所想要的，為什麼呢？我們知道這些英雄的行為都是動態，並且完全通用的，這代表不需要每次再重新建立的時候，都還要創建一個新的 method，如果今天我們創建了100個英雄角色，那麼這100個英雄角色都會包含這些methods在裡面，這樣會占據相當多的記憶體，只需要讓每個 hero 都去 reference 同一個物件就好。
 ```javascript
     const heroMethods = {
         attack() {
@@ -81,7 +81,7 @@ Oh!這似乎不是我們所想要的，為什麼呢？我們知道這些英雄�
 ### Object.create
 >Object.create allows you to create an object which will delegate to another object on failed lookups
 
-看起來還不錯，但有個問題，例如當我們要再為 Hero 增加新的飛行技能的時候，就要在 Hero 那邊再加一行`hero.fly = heroMethods.fly`上去，這樣顯得不是很方便，如果我們可以把這些屬性加到物件的原型上，這樣物件彼此之間就可以互相共用了，而`Object.create` 幫我們解決了這個問題，他幫我們建立一個新的物件，並把屬性繼承到新的物件原型上，然後返回給我們，我們再用 Object.create 來改寫看看。
+看起來還不錯，但有個問題，例如當我們要再為 Hero 增加新的飛行技能的時候，就要在 Hero 那邊再加一行`hero.fly = heroMethods.fly`上去，這樣顯得不是很方便，如果可以把這些屬性加到物件的原型上，這樣物件彼此之間就可以互相共用了，而`Object.create` 可以幫我們完成這件事情，建立一個新的物件，並把屬性繼承到新的物件原型上，然後返回給我們，用 Object.create 來改寫看看吧。
 ```javascript
     const heroMethods = {
         attack() {
@@ -103,7 +103,8 @@ Oh!這似乎不是我們所想要的，為什麼呢？我們知道這些英雄�
 
 ### Prototypal Instantiation
 
-Ｗow～我們這下可以拍復仇者聯盟無限續集了，但還是有一些地方可以做改進的，我們要去維護一個"heroMethods"聽起來有點奇怪，既然 JavaScript 屬於 prototype based 的語言，我們就用 prototypal inheritance 的方式，去繼承我們要的物件似乎更理想囉。
+Ｗow～這下可以拍復仇者聯盟無限續集了，但還是有一些地方可以做小小的改進的，為了要能互相共用這些屬性，卻要去單獨維護一個 "heroMethods" 聽起來有不太合理，那有沒有更好的方法可以達成我們所要的呢？
+有，那就是 `prototype`
 
 **prototype and \__proto__**
 
@@ -127,15 +128,15 @@ Oh!這似乎不是我們所想要的，為什麼呢？我們知道這些英雄�
     const BlackPanther = Hero('BlackPanther', 8)
 ```
 ![Missing new keyword](./object-create-proto.png)
-我們把 heroMethods 裡面的屬性加到 prototype 裡面，接著我們用 Object.create 去繼承 Hero.prototype，這樣一來就完成了。
+我們改用 prototype 把 heroMethods 裡面的屬性加到裡面去，接著用 Object.create 去繼承 Hero.prototype，這樣一來就完成囉。
 
-property 是在 JavaScript 中每個 function 都具有的屬性，讓我們在函數的所有實例化之間共享方法，我們稱這種    pattern 為 **Prototypal Instantiation**。
+prototype 是在 JavaScript 中每個 function 都具有的屬性，讓我們在函數的所有實例化之間共享方法，我們稱這種    pattern 為 **Prototypal Instantiation**。
 
 ### "new" keyword
 Oh～在 JavaScript 裡面難道就沒有一個更快速且便利，完成上面的那些事情嗎？
-答案是有，就是 new 這個 keyword，我們從上面的寫法可以知道，要創建一個 Hero 有兩個重要的地方:
+當然有囉，那就是 new 這個 keyword，從上面的寫法可以知道，要創建一個 Hero 有兩個重要的地方:
 1. 創建對象，並把 function’s prototype 委託給新建立的物件。
-2. 回傳建構式物件回去。
+2. 回傳物件回去。
 
 用 new keyword 來改寫上面例子看看
 ```javascript
@@ -154,18 +155,18 @@ Oh～在 JavaScript 裡面難道就沒有一個更快速且便利，完成上面
 ```
 啊哈～看出來了嘛，沒錯！new keyword 在後面幫你把上面說的兩點做掉了，我們來看一下 new 實際做了哪些事情，在 MDN 上面列出了幾點:
 - Creates a blank, plain JavaScript object(創建一個空的物件)
-- Links (sets the constructor of) this object to another object(鏈結其他的物件，並給予constructor屬性)
-- Passes the newly created object from Step 1 as the this context(把創建的新物件綁定 this)
+- Links (sets the constructor of) this object to another object(物件原型繼承)
+- Passes the newly created object from Step 1 as the this context(把新創建的物件綁定 **this**)
 - Returns this if the function doesn't return its own object(如果函式沒有回傳自己的物件，則回傳this)
 
 那如果我們不小心忘了在前面加**new**呢？
 ![Missing new keyword](./missing-new-keyword.png)
 
-Oh my god! "IronMan" 變成 undefined，還有一個荒唐的錯誤，name 變成在 global object 底下了，而且不會跳出任何的錯誤訊息，這對於我們開發者來說其實不是很 friendly。<br>但不會擔心，社會在走，JavaScript 更新每年都會有，在 ECMAScript 6 中引入了類別 (class) 。
+Oh my god! "IronMan" 變成 undefined，還有一個荒唐的錯誤，name 變成在 global object 底下了，而且不會跳出任何的錯誤訊息，這對於我們開發者來說其實不是很 friendly。<br>但不用擔心，社會在走，JavaScript 更新每年都會有，在 ECMAScript 6 中引入了類別 (class) 。
 ### Class
 > JavaScript classes, introduced in ECMAScript 2015, are primarily syntactical sugar over JavaScript’s existing prototype-based inheritance. The class syntax does not introduce a new object-oriented inheritance model to JavaScript.
 
-在 ECMAScript 6 中新增的 class 只是個 syntactical sugar(語法糖)，與其他OOP語言不太一樣，底層還是實作 prototype-based，我們來試試用 Class 改寫看看吧。
+在 ECMAScript 6 中新增的 class 只是個 syntactical sugar(語法糖)，與其他OOP語言不太一樣，底層還是實作 prototype-based，我們改用 Class 寫寫看吧。
 ```javascript
 class Hero {
     constructor(name,power) {
@@ -183,7 +184,7 @@ const IronMan = new Hero('IronMan', 10)
 const BlackPanther = new Hero('BlackPanther', 8)
 ```
 
-是不是覺得很熟悉啊！是不是跟其他語言的寫法有87分像呢，class 寫法也讓我們寫起來更加簡潔。
+是不是覺得很熟悉啊！是不是跟其他語言的寫法有87分像呢，class 寫法讓我們寫起來更加簡潔與清楚。
 
 喔～那如果我們也一樣小心忘了在前面加**new**呢？
 ![Missing new keyword](./class-missing-new-keyword.png)
