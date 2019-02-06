@@ -11,7 +11,6 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -21,6 +20,7 @@ class BlogIndex extends React.Component {
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const tags = node.frontmatter.tags || []      
           if(title === 'Resume') return false
           return (
             <div key={node.fields.slug}>
@@ -33,6 +33,23 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
+              <div>
+                {
+                  tags.map((tag,index) => (
+                    <span
+                      key={tag + index}
+                      style={{
+                        fontSize: '12px',
+                        border: 'solid 1px rgb(107, 177, 228)',
+                        padding: '3px 5px',
+                        borderRadius: '6px',
+                        color: 'rgb(107, 177, 228)',
+                        marginRight: '7px'
+                      }}
+                    >{tag}</span>
+                  ))
+                }
+              </div>
               <small>{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
@@ -62,6 +79,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            tags
           }
         }
       }
