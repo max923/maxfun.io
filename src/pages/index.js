@@ -20,7 +20,8 @@ class BlogIndex extends React.Component {
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          const tags = node.frontmatter.tags || []      
+          const tags = node.frontmatter.tags || []     
+          const imageSrc = node.frontmatter.image || '' 
           if(title === 'Resume') return false
           return (
             <div key={node.fields.slug}>
@@ -33,6 +34,11 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
+              <section>
+                <figure>
+                  <img src={imageSrc} />
+                </figure>
+              </section>
               <div>
                 {
                   tags.map((tag,index) => (
@@ -80,6 +86,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             tags
+            image
           }
         }
       }

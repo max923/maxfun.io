@@ -3,7 +3,6 @@ title: 2019 最受矚目的 JavaScript 框架與技術學習
 date: '2019-01-14'
 image: 'https://cdn-images-1.medium.com/max/2600/1*RFPEzZmTByjDmScp1sY8Jw.png'
 tags: ['Technology','Translation', '2019']
-link: top-javaScript-frameworks-and-topic
 ---
 
 **以下內容翻譯自: [Top JavaScript Frameworks and Topics to Learn in 2019](https://medium.com/javascript-scene/top-javascript-frameworks-and-topics-to-learn-in-2019-b4142f38df20)**

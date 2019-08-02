@@ -3,7 +3,6 @@ title: JavaScript -- "prototypal"
 date: '2019-02-05'
 image: 'https://i.ytimg.com/vi/MLsg-jv2D08/maxresdefault.jpg'
 tags: ['FrontEnd','JavaScript']
-link: javaScript-prototypal
 ---
 
 ![javascript prototype](https://i.ytimg.com/vi/MLsg-jv2D08/maxresdefault.jpg)
