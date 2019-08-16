@@ -90,7 +90,7 @@
  .token.char,
  .token.constant,
  .token.function {
-   color: rgb(130, 170, 255);
+   color: #ffe597;;
  }
  
  .token.punctuation {
@@ -143,7 +143,7 @@
  .gatsby-highlight {
    margin-bottom: 1.75rem;
    border-radius: 10px;
-   background: #011627;
+   background: #33414c;
    -webkit-overflow-scrolling: touch;
    overflow: auto;
  }

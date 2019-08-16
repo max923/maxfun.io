@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MaxFun]]></title><description><![CDATA[Frontend Enginner]]></description><link>https://max923.github.io/maxfun.io/</link><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Aug 2019 04:03:22 GMT</lastBuildDate><item><title><![CDATA[JavaScript Design Patterns -- Part 1]]></title><description><![CDATA[A  design pattern  is a term used in software engineering for a general reusable solution to a commonly occurring problem in software design…]]></description><link>https://max923.github.io/maxfun.io//javascript-design-patterns-part1/</link><guid isPermaLink="false">https://max923.github.io/maxfun.io//javascript-design-patterns-part1/</guid><pubDate>Wed, 31 Jul 2019 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MaxFun]]></title><description><![CDATA[Frontend Enginner]]></description><link>https://max923.github.io/maxfun.io/</link><generator>RSS for Node</generator><lastBuildDate>Fri, 16 Aug 2019 08:35:56 GMT</lastBuildDate><item><title><![CDATA[Implement image uploads in Apollo GraphQL]]></title><description><![CDATA[Base64 Encoding 
+是一種基於64個可列印字元來表示二進位資料的表示方法，我們可以通過 base64 字串來跟 Graphql server 做溝通，但 base64 編碼文件將比原始二進製文件大了大約33％。 FormData…]]></description><link>https://max923.github.io/maxfun.io//implement-upload-graphQL/</link><guid isPermaLink="false">https://max923.github.io/maxfun.io//implement-upload-graphQL/</guid><pubDate>Sat, 03 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://cdn-media-1.freecodecamp.org/images/1*xCKDdyMn2NKAiufB7jtTwg.png&quot; alt=&quot;javascript prototype&quot;&gt;&lt;/p&gt;
+&lt;center&gt;&lt;small&gt;apollo graphQL&lt;/small&gt;&lt;/center&gt;
+&lt;br&gt;
+最近工作上遇到這問題，也花了些時間來研究，圖片上傳相信很多人都有實作過，但如果是要用 graphQL 實作圖片上傳呢，會稍微麻煩一點，一般來說 web 要實作圖片上傳其實並不難，以下有幾種方式可以做選擇。&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Base64 Encoding&lt;/strong&gt;
+是一種基於64個可列印字元來表示二進位資料的表示方法，我們可以通過 base64 字串來跟 Graphql server 做溝通，但 base64 編碼文件將比原始二進製文件大了大約33％。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;FormData&lt;/strong&gt;
+我覺得這是一個比較好的方法，首先我們要先了解什麼是 FormData ，FormData 是 Web API 提供的一種物件格式，表單的 fields 與 values，對應到物件的 key/value ，利用在 Content-Type 設置 “multipart/form-data”，可以很輕易的在瀏覽器之間做傳遞。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;input&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;file&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;image-upoad&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onchange&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;handleUpload()&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;In GraphQL&lt;/h2&gt;
+&lt;p&gt;GraphQL 主要傳遞資料的方式是把 query data 經由 POST method 放在 body 裡面傳遞給 Server，Server 會再去解析query裡面的資料，而 apollo-link-http 則幫我們統一端口並處理了資料，但並未支援 form-data 格式。🤨
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/maxfun.io/static/1c6811bdb9af3277de77150a9e9e18fe/a621d/request-header.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 428px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 111.21495327102804%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsSAAALEgHS3X78AAAC+ElEQVQ4y5VVCXLbMBDT/5/YyLovyrqtyzq8AdaW0kzSptUMRzSHArEAlraK61WCIJQkSSSJY/E9V9Z1k3VZpa5rKctS2rYTPo/HQ8cx/+6x7ve7uK4L0EDSLJM4jqRSoEKuOCzH2Pf9/OAA/W4oIDeHYQhmnvhg6gCcoAQvq1KKopACLIdhkFvfy98eglr7RsBAXMeRKIzFtm3xAEp2aZoC8CphFD/nZI3fOQ7J81yaptU3K9q27cmQEzJ0XU+BMjDzUX4FVtw8z7PMkIXSLOsCfVeZpknXucb5fVk+Sj4APdcHw1AC3wOLUnzfx+ZZ/ufRkg9A3w/UYTUnzcQYo9pVZaVOT9P4I9hpSgA27sWBEanGJwNYZjI4nIsDbYtX+awgSWKVJEbEIo4okrppPptChw0+MLnBpkidvVxslF6cDKid6rjcT/0WaMf3YcgLcFMWYRipo8wdMxji5CRJNdy/3mw15p9KJrr99qbhJlBmEIOq0rIJavDbBlsf5f4UbGXINougCXVk6RfkkNGpqlrGcTxB9j+02pfWozYHGHPoOq5qGMMcusuOmeb5Czua+YndoSFnKbSK0A0hWu96LdQgOlzVFd5P0Py11naddhENY2tSpgYu83eWGbHIhlFha/Edx8nZASUyWKP0Hj38O6vjTf05jjXOLX7ITBEsR2zIhq3U9zd1mK4zh7wY9IK43XDgotHZ9ifYMA7SD70SsahN17Xa4Fy4AYj0/cDXXJZYb9oGo1VNXXQTA20Q/AX6A1EPdj1HtddOqZv6dMmAIePCMjvoxRYcx0kdZ5wKbcNJtaPGT6a7rjHoFikz0NzMkw7Bj6cFM7aa++qm87a5z0ok0qwalYRlWw9esFEoBg7GyVNLbuhunTJr4SDBeIFQFmrYD6NMYMxklDica+y03CSvG5uAADl69AYwDyAsj71LrVro6IGpsgEA1/vXDc79AQ4clSFKTlL+QSWw/uMPiOA8bMBHZD3CYQJTp3VbT0mYTzYB08D78x01/JV2wRfTCwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;javascript prototype&quot;
+        title=&quot;&quot;
+        src=&quot;/maxfun.io/static/1c6811bdb9af3277de77150a9e9e18fe/a621d/request-header.png&quot;
+        srcset=&quot;/maxfun.io/static/1c6811bdb9af3277de77150a9e9e18fe/b6e32/request-header.png 148w,
+/maxfun.io/static/1c6811bdb9af3277de77150a9e9e18fe/f64d6/request-header.png 295w,
+/maxfun.io/static/1c6811bdb9af3277de77150a9e9e18fe/a621d/request-header.png 428w&quot;
+        sizes=&quot;(max-width: 428px) 100vw, 428px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;- Clint(&lt;a href=&quot;https://github.com/jaydenseric/apollo-upload-client&quot;&gt;&lt;strong&gt;apollo-upload-client&lt;/strong&gt;&lt;/a&gt;) 👻&lt;/h2&gt;
+&lt;p&gt;瀏覽器預設的 Content-Type 是 application/json，要傳遞 FormData 則需要改成 multipart/form-data，這時就需要 &lt;strong&gt;apollo-upload-client&lt;/strong&gt; 來修改端口幫我們實現。
+&lt;br&gt;
+&lt;br&gt;
+我們可以看到 &lt;strong&gt;apollo-upload-client&lt;/strong&gt; 是基於 apollo-link 去實現的，主要的是判斷裡面如果有 files 的話就會針對 headers 去做一次修改，並把拿到的內容 append 到 formData。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;    &lt;span class=&quot;token comment&quot;&gt;//....&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; clone&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; files &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;extractFiles&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;body&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; payload &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;serializeFetchParameter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;clone&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Payload&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;files&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;size&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// Automatically set by fetch when the body is a FormData instance.&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;delete&lt;/span&gt; options&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;headers&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;content-type&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; form &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FormData&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      form&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;operations&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; payload&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;//....&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;最後再經由瀏覽器原生的 fetch 方法，傳遞資料給 Server&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;    &lt;span class=&quot;token comment&quot;&gt;//....&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;linkFetch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;uri&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; options&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// Forward the response on the context.&lt;/span&gt;
+        operation&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setContext&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; response &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; response
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;//....&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;- Server(&lt;a href=&quot;https://github.com/jaydenseric/graphql-upload&quot;&gt;graphql-upload&lt;/a&gt;) 👻&lt;/h2&gt;
+&lt;p&gt;在 GraphQL 裡面需要相對應的&lt;a href=&quot;https://graphql.org/graphql-js/basic-types/&quot;&gt;&lt;strong&gt;型別&lt;/strong&gt;&lt;/a&gt;才能把內容連結起來，例如: “Hello” -&gt; “String”，如果和基本型別不符的就需要自定義一個 upload 型別，我們來看看怎麼用 GraphQLScalarType 去自定義。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; typeDefs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`
+    scalar Upload
+  `&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    Upload&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; GraphQLUpload
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; schema &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;makeExecutableSchema&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; typeDefs&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; resolvers &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; GraphQLUpload &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GraphQLScalarType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Upload&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    description&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;The `Upload` scalar type represents a file upload.&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    parseValue&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; value &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;parseLiteral&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;‘Upload’ scalar literal unsupported.&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;serialize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;‘Upload’ scalar serialization unsupported.&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;很不錯的是 graphql-upload 裡面已經幫我們去定義了這個型別了唷 😘。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;  &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; GraphQLUpload &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;graphql-upload&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;當 express server 接收到 clint 端 POST data 的時候，我們需要 body-parser 來解析 URL 編碼，但 body-parser 不支援 mutlipart bodies，這時就會想到 express 框架的 &lt;a href=&quot;https://github.com/mscdex/busboy&quot;&gt;&lt;strong&gt;busboy&lt;/strong&gt;&lt;/a&gt; 去做檔案處理，如果不了解也沒關係，graphql-upload 裡面提供了一個 express middleware 讓我們可以很快地去使用。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;  &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; express &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; graphqlUploadExpress &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;graphql-upload&apos;&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;/graphql&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;graphqlUploadExpress&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; maxFileSize&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10000000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; maxFiles&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;graphqlHTTP&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; schema &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;之後就可以在 schema resolve 裡面取得 image stream 的資料囉。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;  &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;parent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; image &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; filename&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; mimetype&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; createReadStream &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; image
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; stream &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;createReadStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;資料來源:&lt;/strong&gt;&lt;br&gt;
+&lt;small&gt;
+&lt;a href=&quot;https://www.freecodecamp.org/news/how-to-manage-file-uploads-in-graphql-mutations-using-apollo-graphene-b48ed6a6498c/&quot;&gt;- How to manage file uploads in GraphQL mutations using Apollo/Graphene&lt;/a&gt;
+&lt;/small&gt;
+&lt;br&gt;
+&lt;small&gt;
+&lt;a href=&quot;https://zhuanlan.zhihu.com/p/50117878&quot;&gt;- Apollo graphQL 实现文件上传&lt;/a&gt;
+&lt;/small&gt;
+&lt;br&gt;
+&lt;small&gt;
+&lt;a href=&quot;https://medium.com/cubemail88/node-js-express-js-body-parser-%E8%99%95%E7%90%86multipart-form-data%E7%9A%84%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%A1%88-d89d2699b9f&quot;&gt;- [Node.js] express.js + body-parser 處理multipart/form-data的解決方案&lt;/a&gt;
+&lt;/small&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JavaScript Design Patterns -- Part 1]]></title><description><![CDATA[A  design pattern  is a term used in software engineering for a general reusable solution to a commonly occurring problem in software design…]]></description><link>https://max923.github.io/maxfun.io//javascript-design-patterns-part1/</link><guid isPermaLink="false">https://max923.github.io/maxfun.io//javascript-design-patterns-part1/</guid><pubDate>Wed, 31 Jul 2019 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;A &lt;strong&gt;design pattern&lt;/strong&gt; is a term used in software engineering for a general reusable solution to a commonly occurring problem in software design.&lt;br&gt;設計模式在軟體工程上歸納出一般可復用的方案，用於解決軟體設計上常見的問題。）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;你可能會懷疑為什麼要學習設計模式？對我來說有什麼幫助？其實設計模式就很像你今天要從家裡到公司很有很多條路可以選擇，你可以搭捷運後再走路、騎腳踏車再轉公車，或是直接走路去公司，這就類似 Design pattern，不同的設計模式會依據你的情況來做選擇，當然也不是說一定要照著這些模式去做，只是這些設計模式都是軟體的資深人士經過測試與驗證的解決方案，當你學會這些之後，可以在開發架構上有更多的可讀性與重用性。&lt;/p&gt;
