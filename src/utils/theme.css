@@ -4,6 +4,9 @@
  ul,ol{
     margin-left: 1.75rem !important;
  }
+ figure{
+   margin-bottom: 0;
+ }
  code[class*="language-"],
  pre[class*="language-"] {
    color: white;
