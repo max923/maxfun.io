@@ -25,7 +25,7 @@ function Bio() {
               marginBottom: rhythm(2.5),
             }}
           >
-            <Image
+            {/* <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
               style={{
@@ -34,7 +34,7 @@ function Bio() {
                 minWidth: 50,
                 borderRadius: `100%`,
               }}
-            />
+            /> */}
             <p>
               I'm a Frontend Engineer, who focuses on providing thoughtful solutions to user based problems. <br/>
               <a
@@ -67,13 +67,6 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic-circle.jpg/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     site {
       siteMetadata {
         author
@@ -85,5 +78,12 @@ const bioQuery = graphql`
     }
   }
 `
+// avatar: file(absolutePath: { regex: "/profile-pic-circle.jpg/" }) {
+//   childImageSharp {
+//     fixed(width: 50, height: 50) {
+//       ...GatsbyImageSharpFixed
+//     }
+//   }
+// }
 
 export default Bio

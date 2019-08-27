@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import PostTemplate from '../components/PostTemplate'
 import { rhythm, scale } from '../utils/typography'
 
 class BlogPostTemplate extends React.Component {
@@ -11,7 +12,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-
+    console.log(post.id)
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -44,7 +45,10 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-
+        {/* <PostTemplate
+          identifier={post.id}
+          title={post.frontmatter.titl}
+        /> */}
         {/* <ul
           style={{
             display: `flex`,
